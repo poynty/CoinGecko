@@ -38,7 +38,7 @@ namespace CoinGecko.Clients
                 resourceUri = AddParameter(resourceUri, "x_cg_pro_api_key", _apiKey);
             }
 
-            //_httpClient.DefaultRequestHeaders.Add("User-Agent", "your bot 0.1");
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", "CTracker 0.1");
             var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Get, resourceUri))
                 .ConfigureAwait(false);
 
